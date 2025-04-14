@@ -1,0 +1,40 @@
+# Git files
+.git
+.gitignore
+
+# Node modules
+node_modules
+
+# Build artifacts (we rely on 'files' in package.json for dist)
+# dist
+
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Config files
+.editorconfig
+.eslintrc.cjs
+.prettierrc.js
+.prettierignore
+tailwind.config.js
+postcss.config.js
+vite.config.ts
+tsconfig.json
+tsconfig.node.json
+
+# Development/Example files
+/examples/
+DESIGN_CONCEPT.md
+AI_AGENT_GUIDE.md
+README.md
+Dockerfile
+
+# Test files
+/coverage/
+/test-results/
+src/**/*.test.tsx
+src/**/*.spec.tsx 

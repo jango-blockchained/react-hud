@@ -1,87 +1,59 @@
-# Welcome to React Router!
+# React HUD
 
-A modern, production-ready template for building full-stack React applications using React Router.
+A React component library for creating futuristic, high-tech Heads-Up Display (HUD) interfaces.
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/remix-run/react-router-templates/tree/main/default)
+Inspired by sci-fi visuals and cyberpunk aesthetics, this library provides reusable components to build visually striking UIs.
 
-## Features
+See the [Design Concept](./DESIGN_CONCEPT.md) for detailed visual guidelines and the [AI Agent Guide](./AI_AGENT_GUIDE.md) for implementation rules.
 
-- 🚀 Server-side rendering
-- ⚡️ Hot Module Replacement (HMR)
-- 📦 Asset bundling and optimization
-- 🔄 Data loading and mutations
-- 🔒 TypeScript by default
-- 🎉 TailwindCSS for styling
-- 📖 [React Router docs](https://reactrouter.com/)
-
-## Getting Started
-
-### Installation
-
-Install the dependencies:
+## Installation
 
 ```bash
-npm install
+npm install @your-npm-username/react-hud
+# or
+yarn add @your-npm-username/react-hud
 ```
 
-### Development
+*(Note: Replace `@your-npm-username/react-hud` with the actual package name once published.)*
 
-Start the development server with HMR:
+## Basic Usage
 
-```bash
-npm run dev
+```tsx
+import React from 'react';
+// Import components as they are developed, e.g.:
+// import { FrameBox, DataReadout } from '@your-npm-username/react-hud';
+
+function MyApp() {
+  return (
+    <div>
+      {/* Example usage (once components exist):
+      <FrameBox accentColor="#00FFFF">
+        <DataReadout label="Status" value="Online" unit="" />
+      </FrameBox>
+      */}
+      <p>React HUD components will go here!</p>
+    </div>
+  );
+}
+
+export default MyApp;
 ```
 
-Your application will be available at `http://localhost:5173`.
+## Building the Library
 
-## Building for Production
-
-Create a production build:
+To build the distributable files for the library, run:
 
 ```bash
 npm run build
 ```
 
-## Deployment
+This will generate the necessary JavaScript (ES, UMD) and TypeScript definition files in the `dist` directory.
 
-### Docker Deployment
+## Development
 
-To build and run using Docker:
+*   **Linting:** `npm run lint`
+*   **Type Checking:** `npm run typecheck`
 
-```bash
-docker build -t my-app .
+## License
 
-# Run the container
-docker run -p 3000:3000 my-app
-```
-
-The containerized application can be deployed to any platform that supports Docker, including:
-
-- AWS ECS
-- Google Cloud Run
-- Azure Container Apps
-- Digital Ocean App Platform
-- Fly.io
-- Railway
-
-### DIY Deployment
-
-If you're familiar with deploying Node applications, the built-in app server is production-ready.
-
-Make sure to deploy the output of `npm run build`
-
-```
-├── package.json
-├── package-lock.json (or pnpm-lock.yaml, or bun.lockb)
-├── build/
-│   ├── client/    # Static assets
-│   └── server/    # Server-side code
-```
-
-## Styling
-
-This template comes with [Tailwind CSS](https://tailwindcss.com/) already configured for a simple default starting experience. You can use whatever CSS framework you prefer.
-
----
-
-Built with ❤️ using React Router.
+This project is licensed under the MIT License - see the [LICENSE](./LICENSE) file for details (if one is added).
