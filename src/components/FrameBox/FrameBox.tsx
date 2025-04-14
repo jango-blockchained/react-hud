@@ -1,11 +1,11 @@
-import React from 'react';
+import { type FC, type ReactNode, type CSSProperties } from 'react';
 import { Corner } from '../Corner/Corner'; // Import the Corner component
 import styles from './FrameBox.module.css';
 
 /** Props for the FrameBox component */
 interface FrameBoxProps {
   /** Content to render inside the frame */
-  children?: React.ReactNode;
+  children?: ReactNode;
   /** Inner padding of the box (e.g., '1rem', '20px') */
   padding?: string;
   /** Accent color for the corners (hex code) */
@@ -19,7 +19,7 @@ interface FrameBoxProps {
   /** Additional CSS class names for the main container */
   className?: string;
   /** Inline styles for the main container */
-  style?: React.CSSProperties;
+  style?: CSSProperties;
 }
 
 /** Default values */
@@ -33,7 +33,7 @@ const DEFAULT_BACKGROUND_COLOR = 'rgba(0, 20, 30, 0.1)'; // Subtle dark blueish 
  * A container component that renders content within a stylized HUD frame
  * created using four Corner components.
  */
-export const FrameBox: React.FC<FrameBoxProps> = ({
+export const FrameBox: FC<FrameBoxProps> = ({
   children,
   padding = DEFAULT_PADDING,
   accentColor = DEFAULT_ACCENT_COLOR,
@@ -48,7 +48,7 @@ export const FrameBox: React.FC<FrameBoxProps> = ({
     ${className}
   `.trim();
 
-  const frameBoxStyle: React.CSSProperties = {
+  const frameBoxStyle: CSSProperties = {
     ...style,
     padding: padding,
     backgroundColor: backgroundColor,

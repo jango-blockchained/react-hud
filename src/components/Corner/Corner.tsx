@@ -1,4 +1,4 @@
-import React from 'react';
+import { type FC, type CSSProperties } from 'react';
 import styles from './Corner.module.css';
 
 /** Defines the position of the corner bracket */
@@ -17,7 +17,7 @@ interface CornerProps {
   /** Additional CSS class names */
   className?: string;
   /** Inline styles */
-  style?: React.CSSProperties;
+  style?: CSSProperties;
 }
 
 /** Default values */
@@ -28,7 +28,7 @@ const DEFAULT_COLOR = '#00FFFF'; // Default to Cyan
 /**
  * Renders a single geometric corner bracket element.
  */
-export const Corner: React.FC<CornerProps> = ({
+export const Corner: FC<CornerProps> = ({
   position,
   size = DEFAULT_SIZE,
   thickness = DEFAULT_THICKNESS,
@@ -42,7 +42,7 @@ export const Corner: React.FC<CornerProps> = ({
     ${className}
   `.trim();
 
-  const cornerStyle: React.CSSProperties = {
+  const cornerStyle: CSSProperties = {
     ...style,
     '--corner-size': size,
     '--corner-thickness': thickness,

@@ -1,4 +1,4 @@
-import React from 'react';
+import { type FC, type ReactNode, type CSSProperties, type ButtonHTMLAttributes } from 'react';
 import styles from './Button.module.css';
 
 /**
@@ -9,9 +9,9 @@ import styles from './Button.module.css';
 type ButtonVariant = 'primary' | 'secondary';
 
 /** Props for the Button component */
-interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
+interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   /** Content to render inside the button */
-  children: React.ReactNode;
+  children: ReactNode;
   /** Visual style of the button */
   variant?: ButtonVariant;
   /** Accent color for specific highlights (hex code) */
@@ -26,7 +26,7 @@ const DEFAULT_ACCENT_COLOR = '#00FFFF';
 /**
  * A futuristic HUD-style button component.
  */
-export const Button: React.FC<ButtonProps> = ({
+export const Button: FC<ButtonProps> = ({
   children,
   variant = 'primary', // Default to primary variant
   accentColor = DEFAULT_ACCENT_COLOR,
@@ -42,7 +42,7 @@ export const Button: React.FC<ButtonProps> = ({
   `.trim();
 
   // Apply accent color using CSS custom properties
-  const buttonStyle: React.CSSProperties = {
+  const buttonStyle: CSSProperties = {
     ...style,
     '--button-accent-color': accentColor,
   };
