@@ -33,13 +33,15 @@
     "dist"
   ],
   "scripts": {
-    "build": "tsc && vite build",
+    "build": "bun run typecheck && bun run build:vite",
+    "build:vite": "vite build",
     "typecheck": "tsc --noEmit",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "lint:fix": "eslint . --ext ts,tsx --fix",
     "format": "prettier --write .",
     "format:check": "prettier --check .",
-    "storybook": "storybook dev -p 6006",
+    "storybook": "bun run storybook:dev",
+    "storybook:dev": "storybook dev -p 6006",
     "build-storybook": "storybook build"
   },
   "dependencies": {

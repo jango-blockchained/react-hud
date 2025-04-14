@@ -6,12 +6,21 @@ Inspired by sci-fi visuals and cyberpunk aesthetics, this library provides reusa
 
 See the [Design Concept](./DESIGN_CONCEPT.md) for detailed visual guidelines and the [AI Agent Guide](./AI_AGENT_GUIDE.md) for implementation rules.
 
+## Tech Stack
+
+*   **Runtime:** [Bun](https://bun.sh/)
+*   **Framework:** [React](https://react.dev/)
+*   **Language:** [TypeScript](https://www.typescriptlang.org/)
+*   **Build Tool:** [Vite](https://vitejs.dev/)
+*   **Styling:** CSS Modules (initially)
+*   **Component Showcase:** [Storybook](https://storybook.js.org/)
+*   **Linting:** [ESLint](https://eslint.org/)
+*   **Formatting:** [Prettier](https://prettier.io/)
+
 ## Installation
 
 ```bash
-npm install @your-npm-username/react-hud
-# or
-yarn add @your-npm-username/react-hud
+bun add @your-npm-username/react-hud
 ```
 
 *(Note: Replace `@your-npm-username/react-hud` with the actual package name once published.)*
@@ -39,20 +48,37 @@ function MyApp() {
 export default MyApp;
 ```
 
+## Development
+
+1.  **Install Dependencies:**
+    ```bash
+    bun install
+    ```
+
+2.  **Run Storybook:**
+    ```bash
+    bun run storybook
+    ```
+    This will usually open Storybook in your browser at `http://localhost:6006`.
+
+3.  **Available Scripts:**
+    *   `bun run build`: Builds the library for production.
+    *   `bun run typecheck`: Checks TypeScript types.
+    *   `bun run lint`: Lints the codebase.
+    *   `bun run lint:fix`: Lints and attempts to fix issues.
+    *   `bun run format`: Formats code using Prettier.
+    *   `bun run format:check`: Checks code formatting.
+    *   `bun run build-storybook`: Builds a static version of Storybook.
+
 ## Building the Library
 
 To build the distributable files for the library, run:
 
 ```bash
-npm run build
+bun run build
 ```
 
 This will generate the necessary JavaScript (ES, UMD) and TypeScript definition files in the `dist` directory.
-
-## Development
-
-*   **Linting:** `npm run lint`
-*   **Type Checking:** `npm run typecheck`
 
 ## License
 
